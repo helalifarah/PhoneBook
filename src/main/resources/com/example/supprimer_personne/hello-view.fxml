@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<?import javafx.scene.image.ImageView?>
+<StackPane stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.supprimer_personne.SupprimerPersonneController">
+    <VBox alignment="TOP_CENTER" spacing="10">
+    <!-- Add a title -->
+
+
+    <!-- Add an ImageView for the image -->
+        <HBox alignment="CENTER" prefHeight="74.0" prefWidth="470.0" spacing="10">
+            <ImageView fitHeight="60" fitWidth="60">
+                <image>
+                    <Image url="@image.png" />
+                </image>
+            </ImageView>
+            <Label styleClass="title-label" text="Gestion Personne" />
+        </HBox>
+    <HBox spacing="10" styleClass="main-container">
+
+        <VBox styleClass="form-container">
+            <!-- Form on the left -->
+            <GridPane alignment="CENTER" hgap="20" prefHeight="250.0" prefWidth="500.0" styleClass="form-pane" vgap="10">
+            <Label styleClass="form-label" text="Cin:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="cinField" prefHeight="31.0" prefWidth="258.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label styleClass="form-label" text="Nom:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="nameField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label styleClass="form-label" text="Prenom:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="lastNameField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label styleClass="form-label" text="Civilite:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <HBox spacing="20" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <RadioButton fx:id="madameToggle" mnemonicParsing="false" onAction="#handleToggleClick" styleClass="radio-button" text="Madame" />
+                    <RadioButton fx:id="msToggle" mnemonicParsing="false" onAction="#handleToggleClick" styleClass="radio-button" text="Ms" />
+                    <RadioButton fx:id="mlleToggle" mnemonicParsing="false" onAction="#handleToggleClick" styleClass="radio-button" text="Mlle" />
+                </HBox>
+
+                <!-- Adjusted position of buttons to the bottom -->
+                <HBox alignment="BOTTOM_LEFT" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <Button onAction="#handleInsertClick" styleClass="action-button-insert" text="Insert" />
+                    <Button onAction="#handleUpdateClick" styleClass="action-button-update" text="Update" />
+                    <Button onAction="#handleDeleteClick" styleClass="action-button-delete" text="Delete" />
+
+                </HBox>
+                <HBox alignment="CENTER" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <Button onAction="#handleAnnulerClick" styleClass="action-button-clear" text="Clear" />
+                </HBox>
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+
+            </GridPane>
+
+            <!-- Buttons for Insert, Update, Delete -->
+
+        </VBox>
+
+        <!-- TableView on the right -->
+        <!-- TableView on the right -->
+        <VBox layoutX="108.0" layoutY="54.0" prefHeight="250.0" prefWidth="500.0" spacing="10.0" styleClass="table-container">
+            <TableView fx:id="personTableView" prefWidth="500">
+                <columns>
+                    <!-- Define your table columns here -->
+                    <TableColumn text="numCIN" fx:id="cinColumn">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="numCin" />
+                        </cellValueFactory>
+                    </TableColumn>
+
+
+                    <TableColumn text="Nom" fx:id="nomColumn">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="nom" />
+                        </cellValueFactory>
+                    </TableColumn>
+
+                    <TableColumn text="Prenom" fx:id="prenomColumn">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="prenom" />
+                        </cellValueFactory>
+                    </TableColumn>
+
+                    <TableColumn text="Civilite" fx:id="civiliteColumn">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="civilite" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+
+    </HBox>
+
+        <HBox alignment="CENTER" prefHeight="74.0" prefWidth="470.0" spacing="10">
+            <ImageView fitHeight="60" fitWidth="60">
+                <image>
+                    <Image url="@contact.png" />
+                </image>
+            </ImageView>
+            <Label styleClass="title-label2" text="Gestion Annuaire" />
+        </HBox>
+        <HBox spacing="10" styleClass="main-container">
+        <!-- Second Form Container -->
+        <VBox spacing="10" styleClass="form-container">
+            <GridPane alignment="CENTER" hgap="20" prefHeight="250.0" prefWidth="500.0" styleClass="form-pane" vgap="10">
+                <!-- Form fields and labels for the second form -->
+                <Label styleClass="form-label" text="Cin:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="numCinField" prefHeight="31.0" prefWidth="258.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label styleClass="form-label" text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="phoneNumberField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label styleClass="form-label" text="Phone Type:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="phoneTypeField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <HBox alignment="CENTER" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <Button onAction="#handleAddPhoneNumber" text="Add Phone Number" styleClass="button2" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                    <!-- Add this button inside your form2-container VBox -->
+                    <Button onAction="#handleDeletePhoneNumber" text="Delete Phone Number" styleClass="action-button-delete" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+
+                </HBox>
+                 <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+        </VBox>
+
+        <VBox prefHeight="250.0" prefWidth="500.0" spacing="10.0" styleClass="table-container">
+            <TableView fx:id="phoneNumberTableView" styleClass="table-view" prefWidth="500">
+            <columns>
+                        <TableColumn text="Num CIN" fx:id="numCinColumn" styleClass="table-column">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="numCin" />
+                            </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn text="Phone Number" fx:id="phoneNumberColumn" styleClass="table-column">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="phoneNumber" />
+                            </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn text="Phone Type" fx:id="phoneTypeColumn" styleClass="table-column">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="phoneType" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </VBox>
+        </HBox>
+
+    </VBox>
+</StackPane>

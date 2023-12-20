@@ -1,0 +1,160 @@
+.root {
+    -fx-background-color: #f5f5f5; /* Light gray background color for the entire scene */
+}
+
+.main-container {
+    -fx-spacing: 20px; /* Spacing between sections */
+    -fx-padding: 20px; /* Padding around the main container */
+}
+
+.title-label {
+    -fx-font-size: 28px; /* Larger font size for the title */
+    -fx-font-family: "Arial", sans-serif; /* Font family for the title */
+    -fx-font-weight: bold; /* Make the title bold */
+    -fx-text-fill: #24aae2; /* Dark gray text color for the title */
+}
+.title-label2 {
+    -fx-font-size: 28px; /* Larger font size for the title */
+    -fx-font-family: "Arial", sans-serif; /* Font family for the title */
+    -fx-font-weight: bold; /* Make the title bold */
+    -fx-text-fill: #76aef3; /* Dark gray text color for the title */
+}
+
+.form-container {
+    -fx-background-color: #ffffff; /* White background color for the form container */
+    -fx-padding: 20px; /* Padding inside the form container */
+    -fx-border-radius: 10px; /* Rounded corners for the form container */
+    -fx-border-color: #99c2ff; /* Border color for the form container */
+}
+
+.table-container {
+    -fx-background-color: #808080; /* Grey background color for the table container */
+    -fx-padding: 0px; /* Padding inside the table container */
+    -fx-border-radius: 10px; /* Rounded corners for the table container */
+    -fx-border-width: 0; /* Remove the border */
+}
+
+/* Define a custom style for the table */
+.table-view {
+    -fx-background-color: transparent; /* Transparent background color for the table view */
+}
+
+/* Define a custom style for the table columns */
+.table-column {
+    -fx-padding: 10; /* Adjust padding for the table columns */
+}
+
+.form-label {
+    -fx-font-size: 16px; /* Larger font size for labels */
+}
+
+.form-field {
+    -fx-pref-width: 200px; /* Preferred width for text fields */
+    -fx-font-size: 14px; /* Font size for text fields */
+}
+
+.radio-button {
+    -fx-font-size: 14px; /* Font size for radio buttons */
+}
+
+/* Updated button styles */
+.action-button-insert {
+    -fx-background-color: #4CAF50; /* Green background color for insert button */
+    -fx-text-fill: white; /* White text color for insert button */
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-border-radius: 25;
+    -fx-border-width: 0;
+}
+
+.action-button-update {
+    -fx-background-color:  #3498db; /* Blue background color for update button */
+    -fx-text-fill: white; /* White text color for update button */
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-border-radius: 25;
+    -fx-border-width: 0;
+}
+
+.action-button-delete {
+    -fx-background-color: #DC3545; /* Red background color for delete button */
+    -fx-text-fill: white; /* White text color for delete button */
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-border-radius: 25;
+    -fx-border-width: 0;
+}
+.action-button-clear{
+    -fx-pref-width: 226px;
+    -fx-background-color:   #808080; /* Blue background color for update button */
+    -fx-text-fill: white; /* White text color for update button */
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-border-radius: 25;
+    -fx-border-width: 0;
+}
+
+.action-button-insert:hover {
+    -fx-background-color: #45a049; /* Darker green background color on hover */
+}
+
+.action-button-update:hover {
+    -fx-background-color: #0056b3; /* Darker blue background color on hover */
+}
+
+.action-button-delete:hover {
+    -fx-background-color: #c82333; /* Darker red background color on hover */
+}
+.action-button-clear:hover {
+    -fx-background-color: #555555; /* Darker grey background color on hover */
+}
+
+/* Styles for the second form and its table */
+.form2-container {
+    -fx-background-color: #ffffff; /* White background color for the form container */
+    -fx-padding: 20px; /* Padding inside the form container */
+    -fx-border-radius: 10px; /* Rounded corners for the form container */
+    -fx-border-color: #99c2ff; /* Border color for the form container */
+}
+
+.table2-container {
+    -fx-background-color: #808080; /* Grey background color for the table container */
+    -fx-padding: 0px; /* Padding inside the table container */
+    -fx-border-radius: 10px; /* Rounded corners for the table container */
+    -fx-border-width: 0; /* Remove the border */
+}
+
+/* Define a custom style for the second table */
+.table2-view {
+    -fx-background-color: transparent; /* Transparent background color for the second table view */
+}
+
+/* Define a custom style for the second table columns */
+.table2-column {
+    -fx-padding: 10; /* Adjust padding for the second table columns */
+}
+
+.form2-label {
+    -fx-font-size: 16px; /* Larger font size for labels in the second form */
+}
+
+.form2-field {
+    -fx-pref-width: 200px; /* Preferred width for text fields in the second form */
+    -fx-font-size: 14px; /* Font size for text fields in the second form */
+}
+
+.button2 {
+    -fx-background-color: #3498db; /* Blue background color for buttons in the second form */
+    -fx-text-fill: white; /* White text color for buttons in the second form */
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-border-radius: 25;
+    -fx-border-width: 0;
+}
+
+
+.button2:hover {
+    -fx-background-color: #0056b3; /* Darker blue background color on hover for buttons in the second form */
+}
+
+
